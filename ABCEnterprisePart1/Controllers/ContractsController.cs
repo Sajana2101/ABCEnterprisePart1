@@ -15,7 +15,7 @@ public class ContractsController : Controller
     public async Task<IActionResult> Index()
     {
         var files = await _fileService.ListFilesAsync();
-        return View(files); // expects Views/Documents/Index.cshtml
+        return View(files); 
     }
 
 
@@ -37,10 +37,10 @@ public class ContractsController : Controller
             return View();
         }
 
-        // Upload file to Azure File Share
+       
         await _fileService.UploadAsync(file.FileName, file.OpenReadStream());
 
-        // Send a queue message
+        
         await _queueService.SendMessageAsync($"File uploaded: {file.FileName}");
 
         TempData["Message"] = "File uploaded successfully to abcfile and message sent to queue!";

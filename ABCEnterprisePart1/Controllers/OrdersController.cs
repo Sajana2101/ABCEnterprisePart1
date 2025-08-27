@@ -103,7 +103,7 @@ public class OrdersController : Controller
         var table = _tableService.GetTableClient("orderstable");
         var orderId = Guid.NewGuid().ToString();
 
-        // var orderDateUtc = DateTime.SpecifyKind(model.OrderDate, DateTimeKind.Utc);
+      
 
         var entity = new TableEntity(PartitionKey, orderId)  
 {

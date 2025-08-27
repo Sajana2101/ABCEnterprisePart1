@@ -36,7 +36,7 @@ public class CustomersController : Controller
                 CustomerName = e.GetString("CustomerName"),
                 CustomerPhone = e.GetString("CustomerPhone"),
                 CustomerEmail = e.GetString("CustomerEmail"),
-               // ImageURL = e.ContainsKey("ImageUrl") ? e.GetString("ImageUrl") : null
+               
             })
             .ToList();
 
@@ -59,7 +59,7 @@ public class CustomersController : Controller
             CustomerName = entity.Value.GetString("CustomerName"),
             CustomerPhone = entity.Value.GetString("CustomerPhone"),
             CustomerEmail = entity.Value.GetString("CustomerEmail"),
-          //  ImageURL = entity.Value.ContainsKey("ImageUrl") ? entity.Value.GetString("ImageUrl") : null
+         
         };
 
         return View(customer);
@@ -90,7 +90,7 @@ public class CustomersController : Controller
        
         await table.AddEntityAsync(entity);
 
-        // Queue message
+       
         await _queueService.SendMessageAsync($"Customer Created");
 
         TempData["Message"] = "Customer created successfully!";
@@ -113,7 +113,7 @@ public class CustomersController : Controller
             CustomerName = entity.Value.GetString("CustomerName"),
             CustomerPhone = entity.Value.GetString("CustomerPhone"),
             CustomerEmail = entity.Value.GetString("CustomerEmail"),
-           // ImageURL = entity.Value.ContainsKey("ImageUrl") ? entity.Value.GetString("ImageUrl") : null
+           
         };
 
         return View(customer);
@@ -136,7 +136,7 @@ public class CustomersController : Controller
             { "CustomerEmail", model.CustomerEmail ?? "" }
         };
 
-        // If a new image is uploaded, replace URL
+       
        
 
         await table.UpsertEntityAsync(entity);

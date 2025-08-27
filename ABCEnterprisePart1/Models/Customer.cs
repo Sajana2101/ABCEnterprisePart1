@@ -7,7 +7,7 @@ namespace ABCEnterprisePart1.Models
     public class Customer: ITableEntity
     {
         public string? PartitionKey { get; set; } = "Customers";
-        public string? RowKey { get; set; } // Unique Customer ID
+        public string? RowKey { get; set; } 
         public string? CustomerName { get; set; }
         public string? CustomerPhone { get; set; }
         public string? CustomerEmail { get; set; }

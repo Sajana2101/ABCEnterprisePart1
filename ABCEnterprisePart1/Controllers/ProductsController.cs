@@ -215,7 +215,7 @@ public class ProductsController : Controller
     {
         { "ProductName", model.ProductName },
         { "Description", model.Description ?? "" },
-       // { "Quantity", model.Quantity ?? 0 },
+      
         { "Price", model.Price }
     };
 
