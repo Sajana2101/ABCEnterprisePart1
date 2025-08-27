@@ -1,0 +1,49 @@
+﻿@model ABCEnterprisePart1.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
+<img src="~/images/backgroundorders.jpg" 
+     id="background-image"
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; z-index: -1;" 
+     alt="Background Image" />
+
+<h2 style="font-family: 'Didot', serif; font-size: 2rem; letter-spacing: 2px; font-weight: 400;" class="text-center mb-4">
+    Create
+</h2>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            
+           
+            <div class="form-group">
+                <label asp-for="CustomerName"></label>
+                <select asp-for="CustomerName" asp-items="ViewBag.CustomerList" class="form-control">
+                    <option value="">-- Select Customer --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductName"></label>
+                <select asp-for="ProductName" asp-items="ViewBag.ProductList" class="form-control">
+                    <option value="">-- Select Product --</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

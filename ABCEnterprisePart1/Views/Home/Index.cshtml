@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Vogue Vault - Home";
+}
+
+<!-- Banner -->
+
+
+
+<section class="w-full">
+    <img src="~/Images/Discover.png"
+         alt="Luxury Handbags Banner"
+         class="w-full object-cover mx-auto"
+         style="width:100%; max-width:1600px; max-height:90vh;" />
+</section>
+
+<section class="w-full flex justify-center mt-6">
+    <img src="~/Images/Discover.jpg"
+         alt="Designer Handbags Collection"
+         class="object-cover"
+         style="width:100%; max-width:1600px; max-height:90vh;" />
+</section>
+
+<section class="text-center py-16 px-12 bg-white">
+    <h2 class="text-4xl font-light mb-6" style="font-family: 'Didot', serif;">Our Story</h2>
+    <p class="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
+        At Vogue Vault, we believe a handbag is never just an accessory, it is an emblem of elegance, confidence, and individuality. Each piece you carry speaks volumes, reflecting not only your style but also the story you choose to tell.
+
+Our collections are inspired by the eternal allure of high fashion, where timeless craftsmanship meets modern design. We proudly curate an exclusive selection of luxury brands such as Prada, Hermès, Chanel, Dior, Louis Vuitton, and more. We bring you iconic pieces that embody sophistication and artistry.
+
+Every handbag is more than a purchase; it is an investment in quality, heritage, and beauty. From the precision of hand-stitched leather to the innovation of contemporary design, our offerings represent the pinnacle of craftsmanship. These are not just accessories, they are heirlooms meant to be treasured and carried with pride.
+
+At Vogue Vault, our mission is to make the world of luxury fashion accessible while preserving its exclusivity. Whether you are seeking a timeless Hermès classic, a bold Prada statement, or the effortless elegance of Chanel, we bring the prestige of the runway to your personal collection.
+
+Step into the world of Vogue Vault, where every handbag is a symbol of refinement, individuality, and the art of luxury. With us, you don’t just carry fashion, you carry legacy.
+    </p>
+</section>
+
+<section class="w-full">
+    <img src="~/Images/Elevate Your Style.jpg"
+         alt="Luxury Handbags Banner"
+         class="w-full object-cover mx-auto"
+         style="width:100%; max-width:1600px; max-height:90vh;" />
+</section>
+
+
+<section class="w-full bg-gray-50 py-12">
+    <h2 class="text-3xl font-light text-center mb-8" style="font-family: 'Didot', serif;">
+        Featured Brands
+    </h2>
+
+    <div class="overflow-hidden relative">
+        <div id="brandCarousel" class="flex animate-scroll space-x-8">
+           
+            <img src="~/Images/gucci.jpg" alt="Gucci" class="h-20 object-contain" />
+            <img src="~/Images/prada.jpg" alt="Prada" class="h-20 object-contain" />
+            <img src="~/Images/lv.jpg" alt="Louis Vuitton" class="h-20 object-contain" />
+            <img src="~/Images/channel.jpg" alt="Chanel" class="h-20 object-contain" />
+            <img src="~/Images/Ysl (2).jpg" alt="Yseve Saint Laurent" class="h-20 object-contain" />
+            <img src="~/Images/hermes.jpg" alt="Hermès" class="h-20 object-contain" />
+            <img src="~/Images/dior.jpg" alt="DIor" class="h-20 object-contain" />
+            <img src="~/Images/Coach.jpg" alt="Coach" class="h-20 object-contain" />
+
+            <img src="~/Images/gucci.jpg" alt="Gucci" class="h-20 object-contain" />
+            <img src="~/Images/prada.jpg" alt="Prada" class="h-20 object-contain" />
+            <img src="~/Images/lv.jpg" alt="Louis Vuitton" class="h-20 object-contain" />
+            <img src="~/Images/channel.jpg" alt="Chanel" class="h-20 object-contain" />
+            <img src="~/Images/Ysl (2).jpg" alt="Yseve Saint Laurent" class="h-20 object-contain" />
+            <img src="~/Images/hermes.jpg" alt="Hermès" class="h-20 object-contain" />
+            <img src="~/Images/dior.jpg" alt="DIor" class="h-20 object-contain" />
+            <img src="~/Images/Coach.jpg" alt="Coach" class="h-20 object-contain" />
+        </div>
+    </div>
+</section>
+
+<style>
+    @@keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-scroll {
+        display: flex;
+        animation: scroll 30s linear infinite; /* slower, smooth scroll */
+        width: max-content;
+    }
+
+    /* Optional: reduce spacing on smaller screens */
+    @@media (max-width: 768px) {
+        .animate-scroll img
+
+    {
+        height: 12rem; /* slightly smaller on mobile */
+    }
+
+    }
+</style>

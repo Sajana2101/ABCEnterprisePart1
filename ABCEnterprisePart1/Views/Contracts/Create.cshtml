@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Contracts";
+}
+
+<h1>Contracts</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+     <a asp-controller="Contracts" asp-action="Index" class="btn btn-success mt-2">Return to Contracts</a>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select File:</label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-dark mt-2">Upload</button>
+</form>
