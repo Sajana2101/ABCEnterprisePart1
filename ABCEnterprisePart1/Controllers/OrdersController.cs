@@ -200,7 +200,7 @@ public class OrdersController : Controller
         var table = _tableService.GetTableClient(TableName);
         await table.DeleteEntityAsync(PartitionKey, id);
 
-        TempData["Message"] = "Order deleted successfully!";
+        TempData["OrdersMessage"] = "Order deleted successfully!";
         return RedirectToAction(nameof(Index));
     }
 }

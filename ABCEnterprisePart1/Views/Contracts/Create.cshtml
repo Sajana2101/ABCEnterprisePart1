@@ -4,10 +4,10 @@
 
 <h1>Contracts</h1>
 
-@if (TempData["Message"] != null)
+@if (TempData["ContractsMessage"] != null)
 {
-    <div class="alert alert-success">@TempData["Message"]</div>
-     <a asp-controller="Contracts" asp-action="Index" class="btn btn-success mt-2">Return to Contracts</a>
+    <div class="alert alert-success">@TempData["ContractsMessage"]</div>
+    <a asp-controller="Contracts" asp-action="Index" class="btn btn-success mt-2">Return to Contracts</a>
 }
 @if (TempData["Error"] != null)
 {

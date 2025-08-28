@@ -15,10 +15,9 @@ public class FileService
     {
         var directory = _shareClient.GetRootDirectoryClient();
 
-        // Make file name unique
-        var uniqueFileName = $"{Guid.NewGuid()}_{fileName}";
-
-        var fileClient = directory.GetFileClient(uniqueFileName);
+    
+       
+        var fileClient = directory.GetFileClient(fileName);
         await fileClient.CreateAsync(fileStream.Length);
         await fileClient.UploadAsync(fileStream);
 

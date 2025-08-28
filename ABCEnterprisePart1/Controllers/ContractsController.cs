@@ -43,7 +43,7 @@ public class ContractsController : Controller
         
         await _queueService.SendMessageAsync($"File uploaded: {file.FileName}");
 
-        TempData["Message"] = "File uploaded successfully to abcfile and message sent to queue!";
+        TempData["ContractsMessage"] = "File uploaded successfully to abcfile and message sent to queue!";
         return RedirectToAction("Create");
     }
 }
